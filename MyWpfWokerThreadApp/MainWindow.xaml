@@ -1,0 +1,38 @@
+﻿<Window x:Class="MyWpfWokerThreadApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="295" Width="420" MinHeight="295" MinWidth="420" MaxHeight="295" MaxWidth="420" Closed="Window_Closed">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFBDBDBD" Offset="0"/>
+                <GradientStop Color="#FFF0F0F0" Offset="0.478"/>
+                <GradientStop Color="#FFBDBDBD" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid HorizontalAlignment="Left" Height="158" VerticalAlignment="Top" Width="103" Margin="277,14,0,0">
+            <Grid HorizontalAlignment="Left" Height="93.667" VerticalAlignment="Top" Width="103.333" Margin="0,39.83,0,0" Background="Black">
+                <Label Content="{Binding ThreadValue03}" HorizontalContentAlignment="Center" Margin="10" FontFamily="Quartz MS" FontSize="48" Foreground="Red" Background="Yellow"/>
+            </Grid>
+            <Label Content="Thread 3" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103.333" FontSize="18.667" FontWeight="Bold"/>
+            <Button Content="Suspend/Resume" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103.333" Margin="0,138.497,0,0" Click="Button_Click_3"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="158" VerticalAlignment="Top" Width="104" Margin="152,14,0,0">
+            <Grid HorizontalAlignment="Left" Height="93.667" VerticalAlignment="Top" Width="103.333" Margin="0,39.83,0,0" Background="Black">
+                <Label Content="{Binding ThreadValue02}" HorizontalContentAlignment="Center" Margin="10" FontFamily="Quartz MS" FontSize="48" Foreground="Red" Background="Yellow"/>
+            </Grid>
+            <Label Content="Thread 2" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103.333" FontSize="18.667" FontWeight="Bold"/>
+            <Button Content="Suspend/Resume" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103.333" Margin="0,138.497,0,0" Click="Button_Click_2"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="158" VerticalAlignment="Top" Width="103.5" Margin="25,14.5,0,0">
+            <Grid HorizontalAlignment="Left" Height="93.667" VerticalAlignment="Top" Width="103.333" Margin="0,39.83,0,0" Background="Black">
+                <Label Content="{Binding ThreadValue01}" HorizontalContentAlignment="Center" Margin="10" FontFamily="Quartz MS" FontSize="48" Foreground="Red" Background="Yellow"/>
+            </Grid>
+            <Label Content="Thread 1" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103.333" FontSize="18.667" FontWeight="Bold"/>
+            <Button Content="Suspend/Resume" HorizontalAlignment="Left" Width="103" Margin="0,138,0,0" Click="Button_Click_1"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="50.5" VerticalAlignment="Top" Width="355" Margin="25,188,0,0" Background="#FFB4B4B4">
+            <Label Content="{Binding Message}" Margin="10" Background="#FFCDCDCD" MouseDown="Label_MouseDown"/>
+        </Grid>
+    </Grid>
+</Window>
